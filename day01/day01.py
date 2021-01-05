@@ -45,7 +45,7 @@ def find_winning_triple(data):
     """Find the three numbers in the list that sum to 2020"""
     n = len(data)
     triple_sum = 0
-    for i in range(n - 1):
+    for i in range(n - 2):
         x = data[i]
         for j in range(i + 1, n):
             y = data[j]
