@@ -22,11 +22,11 @@ def traverse(data, right, down):
     counter = 0
     n_trees = 0
     for i in range(down, n, down):
+        counter = counter + 1
         x = data[i]
-        j = right * ((counter + 1)) % row_length
+        j = right * ((counter)) % row_length
         if x[j] == "#":
             n_trees = n_trees + 1
-        counter = counter + 1
     return n_trees
 
 
