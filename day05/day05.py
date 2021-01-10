@@ -1,7 +1,6 @@
 """Advent of code 2020 day 5"""
 
 import csv
-import math
 
 
 def read_file(file):
@@ -19,7 +18,7 @@ data = read_file("data.csv")
 def partition(x, top_int, front_char):
     for i in range(len(x)):
         if x[i] == front_char:
-            top_int = math.floor(top_int - 2**(len(x) - 1 - i))
+            top_int = top_int - 2**(len(x) - 1 - i)
     return top_int
 
 
