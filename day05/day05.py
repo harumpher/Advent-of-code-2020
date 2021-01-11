@@ -15,7 +15,8 @@ example = read_file("example.csv")
 data = read_file("data.csv")
 
 
-def partition(x, top_int, front_char):
+def partition(x, front_char):
+    top_int = (2**(len(x))) - 1
     for i in range(len(x)):
         if x[i] == front_char:
             top_int = top_int - 2**(len(x) - 1 - i)
@@ -25,7 +26,7 @@ def partition(x, top_int, front_char):
 def calc_seat_id(boarding_pass):
     row_chars = boarding_pass[:7]
     col_chars = boarding_pass[7:]
-    seat_id = partition(row_chars, 127, "F") * 8 + partition(col_chars, 7, "L")
+    seat_id = partition(row_chars, "F") * 8 + partition(col_chars, "L")
     return seat_id
 
 
