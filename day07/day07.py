@@ -31,14 +31,14 @@ def count_could_contain(data, color):
     delete = [color]
     next_iter = True
     while next_iter:
-        for inner_color, contents in data.items():
+        for check_color, contents in data.items():
             if any(i in contents for i in could_contain):
-                could_contain.append(inner_color)
-                delete.append(inner_color)
+                could_contain.append(check_color)
+                delete.append(check_color)
         if delete == []:
             next_iter = False
-        for key in delete:
-            del data[key]
+        for i in delete:
+            del data[i]
         delete = []
     # drop initial color from list
     could_contain.remove(color)
