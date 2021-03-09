@@ -31,7 +31,7 @@ print(find_invalid(data, 25))
 def find_contiguous_set(data, preamble_length):
     invalid = find_invalid(data, preamble_length)
     for i in range(2, len(data) + 1):
-        for j in range(len(data) - (i - 1)):
+        for j in range((len(data) + 1) - i):
             contiguous_set = data[j : (j + i)]
             if sum(contiguous_set) == invalid:
                 break
