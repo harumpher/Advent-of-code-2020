@@ -47,7 +47,7 @@ def find_winning_triple(data):
     triple_sum = 0
     for i in range(n - 2):
         x = data[i]
-        for j in range(i + 1, n):
+        for j in range(i + 1, n - 1):
             y = data[j]
             for k in range(j + 1, n):
                 z = data[k]
