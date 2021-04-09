@@ -133,8 +133,8 @@ def initialize_program2(data):
                 binary = int_to_binary(key)
                 mask_binary = list(map(apply_bitmask2, binary, mask))
                 addresses = find_addresses(mask_binary)
-            for k in addresses:
-                memory[k] = val
+                for k in addresses:
+                    memory[k] = val
     return memory
 
 
