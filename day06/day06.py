@@ -36,7 +36,7 @@ print(solve_part_1(data))
 
 def count_common_chars(i):
     sets = [set(j) for j in i]
-    return len(sets[0].intersection(*sets[1:]))
+    return len(set.intersection(*sets))
 
 
 def solve_part_2(data):
