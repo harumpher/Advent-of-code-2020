@@ -33,8 +33,7 @@ def map_allergens_to_ingredients(food_list):
     for allergen in allergens_to_ingredients.keys():
         ingredients = []
         for i in range(len(allergens_list)):
-            allergens = allergens_list[i]
-            if allergen in allergens:
+            if allergen in allergens_list[i]:
                 ingredients.append(set(ingredients_list[i]))
         allergens_to_ingredients[allergen] = ingredients
     for allergen, ingredients in allergens_to_ingredients.items():
