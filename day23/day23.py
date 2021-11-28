@@ -31,10 +31,10 @@ def play_game(cup_list, n):
                 destination = find_cup_m1(destination, max_cup)
         first_pick_up = pick_ups[0]
         last_pick_up = pick_ups[-1]
-        new_after_pick_up = circle_map[destination]
+        new_after_pick_ups = circle_map[destination]
         new_after_current = circle_map[last_pick_up]
         circle_map[destination] = first_pick_up
-        circle_map[last_pick_up] = new_after_pick_up
+        circle_map[last_pick_up] = new_after_pick_ups
         circle_map[current] = new_after_current
         current = circle_map[current]
     return circle_map
